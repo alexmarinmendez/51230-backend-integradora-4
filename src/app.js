@@ -4,6 +4,7 @@ import mongoose from 'mongoose'
 import { loggerMiddleware } from './utils.js'
 
 const app = express()
+app.use(express.json())
 app.use(loggerMiddleware)
 app.use('/api/pizzas', router)
 

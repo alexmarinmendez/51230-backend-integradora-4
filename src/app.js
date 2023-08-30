@@ -18,6 +18,7 @@ const specs = swaggerJSDoc({
 
 const app = express()
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 app.use(loggerMiddleware)
 app.use('/docs', swaggerUIExpress.serve, swaggerUIExpress.setup(specs))
 app.use('/api/pizzas', router)

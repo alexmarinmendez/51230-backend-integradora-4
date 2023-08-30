@@ -23,4 +23,8 @@ export default class PizzaController {
         const { id } = req.params
         res.json(await this.services.delete(id))
     }
+    changeNameByEmail = async(req, res) => {
+        const { id } = req.params
+        res.json(await this.services.changeNameByEmail(id))
+    }
 }

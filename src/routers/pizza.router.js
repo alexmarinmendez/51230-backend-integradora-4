@@ -4,6 +4,7 @@ import PizzaController from '../controllers/pizza.controller.js'
 const router = Router()
 const controller = new PizzaController()
 
+router.get('/change-name/:id', controller.changeNameByEmail.bind(controller))
 router.get('/', controller.get.bind(controller))
 router.get('/:id', controller.getById.bind(controller))
 router.post('/', controller.create.bind(controller))
